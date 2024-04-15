@@ -1,0 +1,9 @@
+package com.example.contacttracer.config
+
+class SecretApiToken {
+    companion object {
+        const val tokenType = "Bearer"
+        const val token =
+            "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjdKVFJjVHp5bzJrLV9XZFlSTWxFViJ9.eyJpc3MiOiJodHRwczovL2NvbnRhY3R0cmFjZXIuZXUuYXV0aDAuY29tLyIsInN1YiI6InlvenVIeU1pc0lvZnpmemYxbWtqT05YN1VnbnNOaEpyQGNsaWVudHMiLCJhdWQiOiJodHRwczovL2NvbnRhY3R0cmFjZXItYXBpLyIsImlhdCI6MTYzMjY2ODU1MCwiZXhwIjoxNjMyNzU0OTUwLCJhenAiOiJ5b3p1SHlNaXNJb2Z6ZnpmMW1rak9OWDdVZ25zTmhKciIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.Qcmn2KOrbogwcKqX0fJFW3FSocV4uqgFo_zwF4ZGjnoDX3eeuA8z4CtWStjYK7apKtn__BhZXpG7Hb3JXcg4KIYZfYlk0KrAZLGNUVYAyxbILkBwv4kIFvzKnqSsLjt5EnlyBglk-oFTOlgXKzQXpNIlIm8ey1B3BHri1195daKdR2hF88kt3xAw2M18P5ZI4bbKQ5WxuHt6-pCAgxVpJqloJhOhJwK_Pag0fudS2Ou6AkK7C0T4h_fDriQM1U8SQWuu3jIM_sxSihWRRpPEqOdeIr2PeNluVSgP9Fg3uvAvG-fh8gHMIhPo8VJOxQJmb_BELF3pGoSniltnJMgWCQ"
+    }
+}

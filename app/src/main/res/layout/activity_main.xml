@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.contacttracer.viewmodel.MainActivityViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/containerStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/container_start" />
+
+            <ImageView
+                android:id="@+id/buttonStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="184dp"
+                android:onClick="onStartTracingSwitchClicked"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/containerStart"
+                app:srcCompat="@drawable/button_start"
+                app:tint="@color/button_start_color" />
+
+            <TextView
+                android:id="@+id/textButtonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="Start"
+                android:textColor="#CBF3F0"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/buttonStart" />
+
+            <TextView
+                android:id="@+id/textStartContainer"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:fontFamily="@font/epilogue_bold"
+                android:text="Contact Tracer"
+                android:textColor="#5E5E5E"
+                android:textSize="40sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.286"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/containerStart" />
+
+            <ImageView
+                android:id="@+id/containerLastDeviceFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonStart"
+                app:srcCompat="@drawable/container_last_device_found" />
+
+            <TextView
+                android:id="@+id/textDistanceDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="64dp"
+                android:fontFamily="sans-serif"
+                android:text="0"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/containerLastDeviceFound"
+                app:layout_constraintTop_toTopOf="@+id/containerLastDeviceFound" />
+
+            <TextView
+                android:id="@+id/textDistanceM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="44dp"
+                android:fontFamily="sans-serif"
+                android:text="m"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/containerLastDeviceFound"
+                app:layout_constraintTop_toTopOf="@+id/containerLastDeviceFound" />
+
+            <TextView
+                android:id="@+id/textLastDevicesFound"
+                android:layout_width="160dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="sans-serif"
+                android:text="Ultimo dispositivo incontrato"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/containerLastDeviceFound"
+                app:layout_constraintTop_toTopOf="@+id/containerLastDeviceFound" />
+
+            <ImageView
+                android:id="@+id/containerDevicesFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerLastDeviceFound"
+                app:srcCompat="@drawable/container_last_device_found" />
+
+            <ImageView
+                android:id="@+id/containerSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/containerDevicesFound"
+                app:srcCompat="@drawable/container_summary" />
+
+            <ImageView
+                android:id="@+id/buttonSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="20dp"
+                android:onClick="onSummaryButtonClicked"
+                app:layout_constraintEnd_toEndOf="@+id/containerSummary"
+                app:layout_constraintTop_toBottomOf="@+id/containerDevicesFound"
+                app:srcCompat="@drawable/button_summary" />
+
+            <TextView
+                android:id="@+id/textSummary"
+                android:layout_width="208dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Resoconto del tracking"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="@+id/containerSummary"
+                app:layout_constraintTop_toBottomOf="@+id/containerDevicesFound" />
+
+            <TextView
+                android:id="@+id/textDevicesFound"
+                android:layout_width="181dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="sans-serif"
+                android:text="Totale dispositivi incontrati"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/containerDevicesFound"
+                app:layout_constraintTop_toBottomOf="@+id/containerLastDeviceFound" />
+
+            <TextView
+                android:id="@+id/textAllDeviceFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="44dp"
+                android:fontFamily="sans-serif-black"
+                android:text="0"
+                android:textSize="34sp"
+                app:layout_constraintEnd_toEndOf="@+id/containerDevicesFound"
+                app:layout_constraintTop_toBottomOf="@+id/containerLastDeviceFound" />
+
+            <TextView
+                android:id="@+id/textSummaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="Vai"
+                android:textColor="#CBF3F0"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toEndOf="@+id/buttonSummary"
+                app:layout_constraintStart_toStartOf="@+id/buttonSummary"
+                app:layout_constraintTop_toTopOf="@+id/buttonSummary" />
+
+            <TextView
+                android:id="@+id/textDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="44dp"
+                android:fontFamily="sans-serif"
+                android:text="Distanza"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/containerLastDeviceFound"
+                app:layout_constraintTop_toTopOf="@+id/containerLastDeviceFound" />
+
+            <ProgressBar
+                android:id="@+id/tracingProgressBar"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Small.Title"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="48dp"
+                android:keepScreenOn="true"
+                android:progress="@integer/material_motion_duration_long_1"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/buttonStart"
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toStartOf="@+id/buttonStart"
+                app:layout_constraintTop_toTopOf="@+id/buttonStart" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
